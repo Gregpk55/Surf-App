@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Surf App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="search-box">
+            <select id="region">
+                <option value="central">Central Island (Tofino)</option>
+                <option value="south">South Island (Sooke)</option>
+            </select>
+            
+            <select id="beach">
+                <option value="" disabled selected>Select a Beach</option>
+                <!-- Beaches will be populated dynamically based on the region selection -->
+            </select>
+            <button class="fa-solid fa-magnifying-glass"></button>
+        </div>
+
+        <div class="not-found">
+            <img src="images/404.png" alt="Data not found">
+            <p>Oops! Data not available :/</p>
+        </div>
+
+        <div class="surf-box">
+            <img src="" alt="Surf condition image">
+            <p class="wave-size"></p>
+            <p class="conditions"></p>
+        </div>
+
+        <div class="surf-details">
+            <div class="swell">
+                <i class="fa-solid fa-wave"></i>
+                <div class="text">
+                    <span class="wave-height"></span>
+                    <p>Swell</p>
+                </div>
+            </div>
+            <div class="wind">
+                <i class="fa-solid fa-wind"></i>
+                <div class="text">
+                    <span class="wind-speed"></span>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+            <div class="wind-dir">
+                <i class="fa-solid fa-compass"></i>
+                <div class="text">
+                    <span class="wind-direction"></span>
+                    <p>Wind Direction</p>
+                </div>
+            </div>
+            <div class="temp">
+                <i class="fa-solid fa-thermometer-half"></i>
+                <div class="text">
+                    <span class="air-temperature"></span>
+                    <p>Temperature</p>
+                </div>
+            </div>
+            <div class="clouds">
+                <i class="fa-solid fa-cloud"></i>
+                <div class="text">
+                    <span class="cloud-cover"></span>
+                    <p>Cloud Cover</p>
+                </div>
+                <div class="swell-details">
+                    <div class="swell-height">
+                        <i class="fa-solid fa-wave"></i>
+                        <div class="text">
+                            <span class="swell-height-value"></span>
+                            <p>Swell Height</p>
+                        </div>
+                    </div>
+                    <div class="swell-period">
+                        <i class="fa-solid fa-clock"></i>
+                        <div class="text">
+                            <span class="swell-period-value"></span>
+                            <p>Swell Period</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
