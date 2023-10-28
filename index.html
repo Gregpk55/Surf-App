@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Surf App</title>
 </head>
@@ -19,10 +17,8 @@
                 <option value="central">Central Island (Tofino)</option>
                 <option value="south">South Island (Sooke)</option>
             </select>
-            
             <select id="beach">
                 <option value="" disabled selected>Select a Beach</option>
-                <!-- Beaches will be populated dynamically based on the region selection -->
             </select>
             <button class="fa-solid fa-magnifying-glass"></button>
         </div>
@@ -33,60 +29,61 @@
         </div>
 
         <div class="surf-box">
-            <img src="" alt="Surf condition image">
+            <i class="fas fa-otter"></i>
             <p class="wave-size"></p>
             <p class="conditions"></p>
         </div>
 
-        <div class="surf-details">
-            <div class="swell">
-                <i class="fa-solid fa-wave"></i>
-                <div class="text">
-                    <span class="wave-height"></span>
-                    <p>Swell</p>
-                </div>
-            </div>
-            <div class="wind">
-                <i class="fa-solid fa-wind"></i>
-                <div class="text">
-                    <span class="wind-speed"></span>
-                    <p>Wind Speed</p>
-                </div>
-            </div>
-            <div class="wind-dir">
-                <i class="fa-solid fa-compass"></i>
-                <div class="text">
-                    <span class="wind-direction"></span>
-                    <p>Wind Direction</p>
-                </div>
-            </div>
-            <div class="temp">
-                <i class="fa-solid fa-thermometer-half"></i>
-                <div class="text">
-                    <span class="air-temperature"></span>
-                    <p>Temperature</p>
-                </div>
-            </div>
-            <div class="clouds">
-                <i class="fa-solid fa-cloud"></i>
-                <div class="text">
-                    <span class="cloud-cover"></span>
-                    <p>Cloud Cover</p>
-                </div>
-                <div class="swell-details">
-                    <div class="swell-height">
-                        <i class="fa-solid fa-wave"></i>
-                        <div class="text">
-                            <span class="swell-height-value"></span>
-                            <p>Swell Height</p>
-                        </div>
+        <div class="surf-data-container">
+            <div class="surf-details">
+                <!-- For consistency, I'll structure each detail in a similar manner -->
+                <div class="detail wave-height">
+                    <i class="fas fa-house-tsunami"></i>
+                    <div class="text">
+                        <span class="wave-height-value"></span>
+                        <p>Wave Height</p>
                     </div>
-                    <div class="swell-period">
-                        <i class="fa-solid fa-clock"></i>
-                        <div class="text">
-                            <span class="swell-period-value"></span>
-                            <p>Swell Period</p>
-                        </div>
+                </div>       
+                <div class="detail wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <div class="text">
+                        <span class="wind-speed"></span>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+                <div class="detail wind-dir">
+                    <i class="fa-solid fa-compass"></i>
+                    <div class="text">
+                        <span class="wind-direction"></span>
+                        <p>Wind Direction</p>
+                    </div>
+                </div>
+                <div class="detail temp">
+                    <i class="fa-solid fa-thermometer-half"></i>
+                    <div class="text">
+                        <span class="air-temperature"></span>
+                        <p>Temperature</p>
+                    </div>
+                </div>
+                <div class="detail clouds">
+                    <i class="fa-solid fa-cloud"></i>
+                    <div class="text">
+                        <span class="cloud-cover"></span>
+                        <p>Cloud Cover</p>
+                    </div>
+                </div>
+                <div class="detail swell-height">
+                    <i class="fas fa-water"></i>
+                    <div class="text">
+                        <span class="swell-height-value"></span>
+                        <p>Swell Height</p>
+                    </div>
+                </div>
+                <div class="detail swell-period">
+                    <i class="fa-solid fa-clock"></i>
+                    <div class="text">
+                        <span class="swell-period-value"></span>
+                        <p>Swell Period</p>
                     </div>
                 </div>
             </div>
@@ -98,3 +95,5 @@
 </body>
 
 </html>
+
+

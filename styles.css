@@ -72,80 +72,6 @@ body{
     font-size: 28px;
 }
 
-.surf-box{
-    text-align: center;
-}
-
-.surf-box img{
-    width: 60%;
-    margin-top: 30px;
-}
-
-.surf-box .wave-size{
-    position: relative;
-    color: #06283D;
-    font-size: 4rem;
-    font-weight: 800;
-    margin-top: 30px;
-    margin-left: -16px;
-}
-
-.surf-box .wave-size span{
-    position: absolute;
-    margin-left: 4px;
-    font-size: 1.5rem;
-}
-
-.surf-box .conditions{
-    color: #06283D;
-    font-size: 22px;
-    font-weight: 500;
-    text-transform: capitalize;
-}
-
-.surf-details{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-}
-
-.surf-details .swell, .surf-details .wind{
-    display: flex;
-    align-items: center;
-    width: 50%;
-    height: 100px;
-}
-
-.surf-details .swell{
-    padding-left: 20px;
-    justify-content: flex-start;
-}
-
-.surf-details .wind{
-    padding-right: 20px;
-    justify-content: flex-end;
-}
-
-.surf-details i{
-    color: #06283D;
-    font-size: 26px;
-    margin-right: 10px;
-    margin-top: 6px;
-}
-
-.surf-details span{
-    color: #06283D;
-    font-size: 22px;
-    font-weight: 500;
-}
-
-.surf-details p{
-    color: #06283D;
-    font-size: 14px;
-    font-weight: 500;
-}
-
 .not-found{
     width: 100%;
     text-align: center;
@@ -171,6 +97,14 @@ body{
     opacity: 0;
 }
 
+.surf-box{
+    margin-left: 30px;
+    align-items: center;
+    font-size: 190px;
+    width: 200px;
+    height: 200px;
+}
+
 .fadeIn{
     animation: 0.5s fadeIn forwards;
     animation-delay: 0.5s;
@@ -181,4 +115,49 @@ body{
         scale: 1;
         opacity: 1;
     }
+}
+
+.surf-data-container {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+}
+
+.surf-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.detail {
+    flex-basis: calc(50% - 10px); 
+    display: flex;
+    align-items: center;
+}
+
+.detail i {
+    color: #06283D;
+    font-size: 26px;
+    margin-right: 10px;
+}
+
+.detail span {
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.detail p {
+    color: #06283D;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.not-found p {
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
 }
