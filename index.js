@@ -12,52 +12,52 @@ document.addEventListener('DOMContentLoaded', function() {
         'Long Beach': {
             region: "central",
             lat: 49.1532,
-            lon: -125.9136
+            lng: -125.9136
             
         },
         'Cox Bay': {
             region: "central",
             lat: 49.113359,  
-            lon: -125.8863
+            lng: -125.8863
             
         },
         'North Chesterman': {
             region: "central",
             lat: 49.1130,
-            lon: -125.8836
+            lng: -125.8836
         },
         'South Chesterman': {
             region: "central",
             lat: 49.1139,
-            lon: -125.9061
+            lng: -125.9061
         },
         'Florencia Bay': {
             region: "central",
             lat: 49.0807 ,
-            lon: -125.8846
+            lng: -125.8846
         },
         'Wickanninish': {
             region: "central",
             lat: 49.0772,
-            lon: -125.8769
+            lng: -125.8769
         },
     
         'Sombrio': {
             region: "south",
             lat: 48.49945,
-            lon: -124.2937
+            lng: -124.2937
         },
     
         'Jordan River': {
             region: "south",
             lat: 48.4205,
-            lon: -124.04923
+            lng: -124.04923
         },
     
         'Sewage Waste': {
             region: "south",
             lat:48.4221,
-            lon: -124.0576
+            lng: -124.0576
         }
     
     };
@@ -88,9 +88,9 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
     
-        const { lat, lon } = locations[selectedBeach];
+        const { lat, lng } = locations[selectedBeach];
     
-        fetch(`https://api.stormglass.io/v2/weather/point?lat=${lat}&lon=${lon}&params=waveHeight,windSpeed,windDirection,airTemperature,cloudCover,swellHeight,swellPeriod`, {
+        fetch(`https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=waveHeight,windSpeed,windDirection,airTemperature,cloudCover,swellHeight,swellPeriod`, {
             headers: {
                 'Authorization': APIKey
             }
