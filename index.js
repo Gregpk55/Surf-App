@@ -101,22 +101,22 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(json => {
             
-            const waveHeight = (json.hours[0].waveHeight.sg + json.hours[0].waveHeight.noaa) / 2;
-            const windSpeed = (json.hours[0].windSpeed.sg + json.hours[0].windSpeed.noaa) / 2;
-            const windDirection = Math.round((json.hours[0].windDirection.sg + json.hours[0].windDirection.noaa) / 2);
-            const airTemperature = (json.hours[0].airTemperature.sg + json.hours[0].airTemperature.noaa) / 2;
-            const swellHeight = (json.hours[0].swellHeight.sg + json.hours[0].swellHeight.noaa) / 2;
-            const swellPeriod = (json.hours[0].swellPeriod.sg + json.hours[0].swellPeriod.noaa) / 2;
-            const cloudCover = (json.hours[0].cloudCover.sg + json.hours[0].cloudCover.noaa) / 2;
-    
-                document.querySelector('.wave-height').innerText = `${waveHeight} m`;
-                document.querySelector('.wind-speed').innerText = `${windSpeed} km/h`;
-                document.querySelector('.wind-direction').innerText = `${windDirection}°`;
-                document.querySelector('.air-temperature').innerText = `${airTemperature}°C`;
-                document.querySelector('.swell-height-value').innerText = `${swellHeight} m`;
-                document.querySelector('.swell-period-value').innerText = `${swellPeriod} s`;
-                document.querySelector('.cloud-cover').innerText = `${cloudCover}%`;
-    
+            const waveHeight = ((json.hours[0].waveHeight.sg + json.hours[0].waveHeight.noaa) / 2).toFixed(2);
+const windSpeed = ((json.hours[0].windSpeed.sg + json.hours[0].windSpeed.noaa) / 2).toFixed(2);
+const windDirection = Math.round((json.hours[0].windDirection.sg + json.hours[0].windDirection.noaa) / 2);
+const airTemperature = ((json.hours[0].airTemperature.sg + json.hours[0].airTemperature.noaa) / 2).toFixed(2);
+const swellHeight = ((json.hours[0].swellHeight.sg + json.hours[0].swellHeight.noaa) / 2).toFixed(2);
+const swellPeriod = ((json.hours[0].swellPeriod.sg + json.hours[0].swellPeriod.noaa) / 2).toFixed(2);
+const cloudCover = ((json.hours[0].cloudCover.sg + json.hours[0].cloudCover.noaa) / 2).toFixed(2);
+
+document.querySelector('.wave-height-value').innerText = `${waveHeight} m`;
+document.querySelector('.wind-speed').innerText = `${windSpeed} km/h`;
+document.querySelector('.wind-direction').innerText = `${windDirection}°`;
+document.querySelector('.air-temperature').innerText = `${airTemperature}°C`;
+document.querySelector('.swell-height-value').innerText = `${swellHeight} m`;
+document.querySelector('.swell-period-value').innerText = `${swellPeriod} s`;
+document.querySelector('.cloud-cover').innerText = `${cloudCover}%`;
+
                 
     
             surfBox.style.display = '';
